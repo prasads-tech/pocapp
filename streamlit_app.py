@@ -364,7 +364,7 @@ def main():
 
     # Add tabs for each page
     st.sidebar.image("geico.png", use_column_width=True)
-    current_page_name = st.sidebar.radio("Dashboard", list(pages.keys()))
+    current_page_name = st.sidebar.radio("Centralized Dashboard Policy and Compliance", list(pages.keys()))
     current_page = pages[current_page_name]
 
     # Display the selected page
