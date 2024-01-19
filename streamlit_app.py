@@ -19,14 +19,22 @@ def yaml_editor_page():
     st.title("Policy Editor and Validator")
 
     # Input text area for YAML editing
-    yaml_input = st.text_area("Enter Policy Details Here", height=350)
+    yaml_input = st.text_area("Enter Policy Details Here. The Editor validate the policy by using cloud custodian", height=350)
     validate_button_disabled = not yaml_input.strip()
-    if st.button("VALIDATE POLICY", disabled=validate_button_disabled):
-        if is_valid_yaml(yaml_input):
-            st.success("Policy is valid ..!")
-            st.balloons()
-        else:
-            st.error("Policy is not valid. Please check the syntax..!")
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if st.button("VALIDATE POLICY", disabled=validate_button_disabled):
+            if is_valid_yaml(yaml_input):
+                st.success("Policy is valid ..!")
+                st.balloons()
+            else:
+                st.error("Policy is not valid. Please check the syntax..!")
+    with col2:
+        st.button("SUBMIT")
+        
+    with col3:
+        st.button("CANCEL")
  
 
     # Display parsed YAML
@@ -97,15 +105,15 @@ def resources():
     data = {
         'Cloud': ['Azure', 'AWS ', 'GCP', 'Oracle', 'IBM', 'Alibaba', 'Onprime'],
         'PDF Number': [12322,23242,12343,2343,2341,6543,6543],
-        'Customer Name': ['Debiyandu Shah', 'Debiyandu Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Debiyandu Shah'],
-        'Agency Address': ['Debiyandu Shah', 'Debiyandu Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Debiyandu Shah'],
+        'Customer Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
+        'Agency Address': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
         'Phone Number': [12322,23242,12343,2343,2341,6543,6543],
         'FAX Number': [12322,23242,12343,2343,2341,6543,6543],
-        'Email Address': ['prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com'],
+        'Email Address': ['User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com'],
         'Praposed Date': [12322,23242,12343,2343,2341,6543,6543],
         'Expected Date': [12322,23242,12343,2343,2341,6543,6543],
-        'Applicant Name': ['Debiyandu Shah', 'Debiyandu Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Debiyandu Shah'],
-        'Applicant Email': ['prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com'],
+        'Applicant Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
+        'Applicant Email': ['User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com', 'User@gmail.com'],
         'Applicant GL Code': [12322,23242,12343,2343,2341,6543,6543],
         'Applicant SIC': [12322,23242,12343,2343,2341,6543,6543],
         'Applicant NAICS': [12322,23242,12343,2343,2341,6543,6543],
@@ -130,31 +138,31 @@ def resources():
 
 
 def template():
-    st.title("Templates")
+    st.title("Policy Templates")
     
-    col_names = ["Template1", "Template2", "Template3","Template1", "Template2", "Template3"]
-    image_url = "https://avatars.githubusercontent.com/u/103177420?v=4"
+    # col_names = ["Resource Group Policy", "Tagging Policy", "Resource Group Policy","Tagging Policy"]
+    # image_url = "https://avatars.githubusercontent.com/u/103177420?v=4"
 
-    for _ in range(3):  # Repeat for 3 rows
-        cols = st.columns(6)
-        for i, col in enumerate(cols):
-            with col:
-                st.caption(col_names[i])
-                st.image(image_url)
+    # for _ in range(2):  # Repeat for 3 rows
+    #     cols = st.columns(2)
+    #     for i, col in enumerate(cols):
+    #         with col:
+    #             st.caption(col_names[i])
+    #             st.image(image_url)
 
-    # col1, col2, col3, col4, col5, col6 = st.columns(6)
+    col1, col2, col3 = st.columns(3)
 
-    # with col1:
-    #     st.caption("Template1")
-    #     st.image("https://avatars.githubusercontent.com/u/103177420?v=4")
+    with col1:
+        st.write("Resource Group Policy")
+        st.image("https://avatars.githubusercontent.com/u/103177423?v=4")
 
-    # with col2:
-    #     st.caption("Template2")
-    #     st.image("https://avatars.githubusercontent.com/u/103177420?v=4")
+    with col2:
+        st.write("Tagging Policy")
+        st.image("https://avatars.githubusercontent.com/u/156888825?v=4")
 
-    # with col3:
-    #     st.caption("Template3")
-    #     st.image("https://avatars.githubusercontent.com/u/103177420?v=4")
+    with col3:
+        st.write("Policy")
+        st.image("https://avatars.githubusercontent.com/u/103177429?v=4")
 
 
 def help():
@@ -163,7 +171,7 @@ def help():
     st.image("geico.png")
 
     st.subheader("This is GEICO specific mulicloud resource tagging management and policy compliance dashbord developed for poc and reaserch and developement "
-                 "perspective. Feel free to reach out to prasad.jivane@valuemomentum.com for any clarifications or information required..!")
+                 "perspective. Feel free to reach out to User.jivane@valuemomentum.com for any clarifications or information required..!")
 
 
 # Function for the main app page
@@ -178,12 +186,12 @@ def main_page():
 
             # Sample data
         data = {
-                'Company': ['ValueMomentum', 'GEICO', 'Broadridge', 'Wipro'],
+                'Business': ['Sales', 'Services', 'Policy', 'Underwritig'],
                 'Line of Business': ['Product', 'Services', 'Technology', 'Research'],
                 'Cost Center': ['LOB1', 'LOB2', 'LOB3', 'LOB4'],
-                'App Name': ['Analytics', 'Business', 'Maagement', 'Automation'],
-                'Business Owner': ['Debiyandu','Debiyandu','Debiyandu','Debiyandu'],
-                'Technnical Owner': ['Prasad', 'Prasad','Prasad','Prasad'],
+                'Billing': ['C001', 'C002', 'C003', 'C004'],
+                'Business Owner': ['Mr.Bean','Mr.Bean','Mr.Bean','Mr.Bean'],
+                'Technnical Owner': ['User', 'User','User','User'],
                 'Environment': ['Devlopment', 'Testing', 'Staging','Production'],
                 'Budget': ['$2282','$5560','$9032','$9438'],
                 'Creation Date': ['10-02-2022','25-12-2018','26-11-2020','11-09-2012'],
@@ -203,15 +211,15 @@ def main_page():
             "legend": {"orient": "vertical", "right": "right"},
             "series": [
                 {
-                    "name": "Usage",
+                    "name": "Compliance %",
                     "type": "pie",
                     "radius": "60%",
                     "data": [
-                        {"value": 1048, "name": "AWS"},
-                        {"value": 735, "name": "GCP"},
-                        {"value": 580, "name": "AZURE"},
-                        {"value": 484, "name": "ORACLE"},
-                        {"value": 300, "name": "IBM"},
+                        {"value": 20, "name": "AWS"},
+                        {"value": 20, "name": "GCP"},
+                        {"value": 15, "name": "IBM"},
+                        {"value": 15, "name": "ORACLE"},
+                        {"value": 30, "name": "AZURE"},
                     ],
                     "emphasis": {
                         "itemStyle": {
@@ -239,8 +247,8 @@ def main_page():
     #     'Line of Business': ['Product', 'Services', 'Technology', 'Research'],
     #     'Cost Center': ['LOB1', 'LOB2', 'LOB3', 'LOB4'],
     #     'App Name': ['Analytics', 'Business', 'Maagement', 'Automation'],
-    #     'Business Owner': ['Debiyandu','Debiyandu','Debiyandu','Debiyandu'],
-    #     'Technnical Owner': ['Prasad', 'Prasad','Prasad','Prasad'],
+    #     'Business Owner': ['Mr.Bean','Mr.Bean','Mr.Bean','Mr.Bean'],
+    #     'Technnical Owner': ['User', 'User','User','User'],
     #     'Environment': ['Devlopment', 'Testing', 'Staging','Production'],
     #     'Budget': ['$2282','$5560','$9032','$9438'],
     #     'Creation Date': ['10-02-2022','25-12-2018','26-11-2020','11-09-2012'],
