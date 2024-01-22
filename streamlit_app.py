@@ -105,14 +105,14 @@ def resources():
     data = {
         'Cloud': ['Azure', 'AWS ', 'GCP', 'Oracle', 'IBM', 'Alibaba', 'Onprime'],
         'PDF Number': [12322,23242,12343,2343,2341,6543,6543],
-        'Customer Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
-        'Agency Address': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
+        'Customer Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
+        'Agency Address': ['Mr.Bean Shah', 'Mr.Bean Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
         'Phone Number': [12322,23242,12343,2343,2341,6543,6543],
         'FAX Number': [12322,23242,12343,2343,2341,6543,6543],
         'Email Address': ['prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com'],
         'Praposed Date': [12322,23242,12343,2343,2341,6543,6543],
         'Expected Date': [12322,23242,12343,2343,2341,6543,6543],
-        'Applicant Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'User J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
+        'Applicant Name': ['Mr.Bean Shah', 'Mr.Bean Shah', 'Prasad J', 'Rahul K', 'Kumar Sanu', 'Shahank Raj', 'Mr.Bean Shah'],
         'Applicant Email': ['prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com', 'prasad@gmail.com'],
         'Applicant GL Code': [12322,23242,12343,2343,2341,6543,6543],
         'Applicant SIC': [12322,23242,12343,2343,2341,6543,6543],
@@ -141,7 +141,7 @@ def template():
     st.title("Policy Templates")
     
     # col_names = ["Resource Group Policy", "Tagging Policy", "Resource Group Policy","Tagging Policy"]
-    # image_url = "https://avatars.githubusercontent.com/u/103177420?v=4"
+    # image_url = "https://avatars.githubPrasadcontent.com/u/103177420?v=4"
 
     # for _ in range(2):  # Repeat for 3 rows
     #     cols = st.columns(2)
@@ -154,15 +154,15 @@ def template():
 
     with col1:
         st.write("Resource Group Policy")
-        st.image("https://avatars.githubusercontent.com/u/103177423?v=4")
+        st.image("https://avatars.githubPrasadcontent.com/u/103177423?v=4")
 
     with col2:
         st.write("Tagging Policy")
-        st.image("https://avatars.githubusercontent.com/u/156888825?v=4")
+        st.image("https://avatars.githubPrasadcontent.com/u/156888825?v=4")
 
     with col3:
         st.write("Policy")
-        st.image("https://avatars.githubusercontent.com/u/103177429?v=4")
+        st.image("https://avatars.githubPrasadcontent.com/u/103177429?v=4")
 
 
 def help():
@@ -191,7 +191,7 @@ def main_page():
                 'Cost Center': ['LOB1', 'LOB2', 'LOB3', 'LOB4'],
                 'Billing': ['C001', 'C002', 'C003', 'C004'],
                 'Business Owner': ['Mr.Bean','Mr.Bean','Mr.Bean','Mr.Bean'],
-                'Technnical Owner': ['User', 'User','User','User'],
+                'Technnical Owner': ['Prasad', 'Prasad','Prasad','Prasad'],
                 'Environment': ['Devlopment', 'Testing', 'Staging','Production'],
                 'Budget': ['$2282','$5560','$9032','$9438'],
                 'Creation Date': ['10-02-2022','25-12-2018','26-11-2020','11-09-2012'],
@@ -248,7 +248,7 @@ def main_page():
     #     'Cost Center': ['LOB1', 'LOB2', 'LOB3', 'LOB4'],
     #     'App Name': ['Analytics', 'Business', 'Maagement', 'Automation'],
     #     'Business Owner': ['Mr.Bean','Mr.Bean','Mr.Bean','Mr.Bean'],
-    #     'Technnical Owner': ['User', 'User','User','User'],
+    #     'Technnical Owner': ['Prasad', 'Prasad','Prasad','Prasad'],
     #     'Environment': ['Devlopment', 'Testing', 'Staging','Production'],
     #     'Budget': ['$2282','$5560','$9032','$9438'],
     #     'Creation Date': ['10-02-2022','25-12-2018','26-11-2020','11-09-2012'],
