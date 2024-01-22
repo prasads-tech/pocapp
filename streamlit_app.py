@@ -171,7 +171,7 @@ def help():
     st.image("geico.png")
 
     st.subheader("This is GEICO specific mulicloud resource tagging management and policy compliance dashbord developed for poc and reaserch and developement "
-                 "perspective. Feel free to reach out to User.jivane@valuemomentum.com for any clarifications or information required..!")
+                 "perspective. Feel free to reach out to prasad.jivane@valuemomentum.com for any clarifications or information required..!")
 
 
 # Function for the main app page
