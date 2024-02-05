@@ -158,11 +158,11 @@ def template():
 
     with col2:
         st.write("Tagging Policy")
-        st.image("https://avatars.githubPrasadcontent.com/u/156888825?v=4")
+        st.image("https://avatars.githubusercontent.com/u/103177422?v=4")
 
     with col3:
         st.write("Policy")
-        st.image("https://avatars.githubPrasadcontent.com/u/103177429?v=4")
+        st.image("https://avatars.githubusercontent.com/u/103177423?v=4")
 
 
 def help():
