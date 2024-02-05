@@ -154,7 +154,7 @@ def template():
 
     with col1:
         st.write("Resource Group Policy")
-        st.image("https://avatars.githubusercontent.com/u/103177420?v=4")
+        st.image("https://avatars.githubusercontent.com/u/103177428?v=4")
 
     with col2:
         st.write("Tagging Policy")
