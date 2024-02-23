@@ -4,6 +4,7 @@ import yaml
 import pandas as pd
 from streamlit_dynamic_filters import DynamicFilters
 
+
 # Function to check if YAML is valid
 def is_valid_yaml(yaml_str):
     try:
@@ -11,7 +12,6 @@ def is_valid_yaml(yaml_str):
         return True
     except Exception as e:
         return False
-
 
 
 # # Function for the YAML editor page
@@ -50,7 +50,7 @@ def yaml_editor_page():
 def taggig():
     st.title("Tagging")
 
-    # Create a sample dataframe
+    # Create a sample data frame
     df = pd.DataFrame({
         'Subscriptions': ['sub-crop-nas-non-prod-1', 'sub-crop-nas-prod-3', 'sub-crop-qa-ut-6', 'sub-crop-qa-prod-1', 'sub-uat-nas-non-prod3'],
         'Us-East-1': [23,45,65,34,31],
@@ -78,7 +78,7 @@ def taggig():
     col1, col2 = st.columns(2)
 
     with col1:
-        # Add a multiselect widget to select rows based on the index
+        # Add a multi select widget to select rows based on the index
         selected_indices = st.multiselect('Select :', df.index)
         # Subset the dataframe with the selected indices
         selected_rows = df.loc[selected_indices]
